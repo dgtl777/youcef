@@ -16,15 +16,17 @@
         }
 
         body {
+            width: 100vw;
+            height: 100vh;
             background: url(https://cdn.pixabay.com/photo/2017/09/16/16/09/sea-2755908__340.jpg);
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: 100% 100%;
             text-align: center;
             font-family: 'Dancing Script', 'san-serif';
         }
 
         h1 {
-            color: yellow;
+            color: royalblue;
         }
 
         form {
@@ -69,23 +71,23 @@
         }
 
         h2 {
-            color: orange;
+            color: black;
             margin-top: 50px;
         }
 
         a {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 14px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
             color: royalblue;
             text-decoration: none;
         }
 
-        #link {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
         hr {
             border: 1px solid rgba(0, 0, 0, .1);
+        }
+
+        #desc {
+            font-size: 14px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
     </style>
 </head>
@@ -99,14 +101,11 @@
         <input type="email" name="" id="email" placeholder="Email address or phone number" required><br><br>
         <input type="password" name="" id="pass" placeholder="Password" required minlength="8"><br><br>
         <input type="submit" value="Log In" name="" id="login"><br><br>
-        <a href="">Forgotten password?</a><br><br>
+        <small><a href="">Forgotten password?</a></small><br><br>
         <hr><br>
-        <button id="cna"> Create New Account</button>
-    </form>
-    <small>
-        <p id="link"><a href="">Create a page</a>
-            for a band, celebrity or business</p>
-    </small>
+        <button id="cna">Create New Account</button>
+    </form><br>
+    <p id="desc"><a href="">Create a page</a> for a celebrity, band or business</p>
 
 </body>
 
