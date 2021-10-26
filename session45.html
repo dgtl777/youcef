@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 45</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 200vh;
+            background-image: linear-gradient(palegreen, yellow);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            position: relative;
+        }
+
+        h1 {
+            color: green;
+        }
+
+        .box {
+            width: 400px;
+            height: 400px;
+            background-color: blue;
+            margin: auto;
+            position: sticky;
+            top: 0;
+        }
+
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 150px;
+            left: 150px;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: absolute;
+            top: 0;
+            right: 0;
+            animation-name: box2;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-delay: 1s;
+        }
+
+        @keyframes box2 {
+            from {
+                top: 0;
+                right: 0;
+            }
+
+            to {
+                top: 150px;
+                right: 150px;
+            }
+
+        }
+
+        .box3 {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation-name: box3;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-delay: 2s;
+        }
+
+        @keyframes box3 {
+            from {
+                bottom: 0;
+                left: 0;
+            }
+
+            to {
+                bottom: 150px;
+                left: 150px;
+            }
+
+        }
+
+        .box4 {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            animation-name: box4;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-delay: 3s;
+        }
+
+        @keyframes box4 {
+            from {
+                bottom: 0;
+                right: 0;
+            }
+
+            to {
+                bottom: 150px;
+                right: 150px;
+            }
+        }
+
+
+        .box5 {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation-name: box5;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes box5 {
+            from {
+                top: 0;
+                left: 0;
+            }
+
+            to {
+                top: 150px;
+                left: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Positioning Elements</h1>
+    </header>
+    <div class="box">
+        <div class="box1">
+
+        </div>
+        <div class="box2">
+
+        </div>
+        <div class="box3">
+
+        </div>
+        <div class="box4">
+
+        </div>
+        <div class="box5">
+
+        </div>
+    </div>
+
+</body>
+
+</html>

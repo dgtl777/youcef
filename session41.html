@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 41</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image:
+                linear-gradient(purple, yellow);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            color: yellow;
+        }
+
+        img {
+            border: 10px solid goldenrod;
+            width: 300px;
+            height: 300px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="score">Score: 0/3</h1>
+        <h1>Riddle Master</h1>
+    </header>
+    <h3>1. What has to be broken before you can use it?</h3>
+    <input type="text" name="" id="q1">
+    <button onclick="q1()">Submit Answer</button>
+    <button onclick="h1()">Hint</button>
+    <h3>Result</h3>
+    <h4 id="r1"></h4>
+    <img id="i1"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdBnKUjHzJFjqPbLQjmLyM0r2M8Y1yWpt1Lcd2eIUsJD84jBbV_F_mX3iYUrqW4UL6vWE&usqp=CAU"
+        alt="">
+    <h3>2. I’m tall when I’m young, and I’m short when I’m old. What am I?</h3>
+    <input type="text" name="" id="q2">
+    <button onclick="q2()">Submit Answer</button>
+    <button onclick="h2()">Hint</button>
+    <h3>Result</h3>
+    <h4 id="r2"></h4>
+    <img id="i2"
+        src="https://media.istockphoto.com/photos/the-hand-that-protects-the-candles-in-the-dark-picture-id1064209070?k=20&m=1064209070&s=612x612&w=0&h=t_h2haAUqSCxZZpcvH5C1W09vP1EloJqux_euwubDJ8="
+        alt="">
+    <h3>3. What is full of holes but still holds water?</h3>
+    <input type="text" name="" id="q3">
+    <button onclick="q3()">Submit Answer</button>
+    <button onclick="h3()">Hint</button>
+    <h3>Result</h3>
+    <h4 id="r3"></h4>
+    <img id="i3"
+        src="https://rukminim1.flixcart.com/image/416/416/k0o69ow0/vehicle-cleaning-sponge/r/h/c/soft-expandable-multi-functional-cleaning-sponge-2786-kandid-original-imafjydbf6dgamms.jpeg?q=70"
+        alt="">
+</body>
+<script>
+    var s1 = false;
+    var s2 = false;
+    var s3 = false;
+    var score = 0;
+    var temp1 = false;
+    function h1() {
+        if (temp1 == false) {
+            document.getElementById("i1").style.display =
+                "inline-block";
+            temp1 = true;
+        }
+        else {
+            document.getElementById("i1").style.display =
+                "none";
+            temp1 = false;
+        }
+    }
+    function q1() {
+        var q1 = document.getElementById("q1").value;
+        if (q1.toUpperCase() == "EGG" ||
+            q1.toUpperCase() == "EGGS") {
+            document.getElementById("r1").innerText =
+                "correct answer";
+            if (s1 == false) {
+                score = score + 1;
+                s1 = true;
+            }
+            document.getElementById("score").innerText =
+                "Score: " + score + "/3";
+        }
+        else {
+            document.getElementById("r1").innerText =
+                "wrong answer";
+        }
+    }
+    var temp2 = false;
+    function h2() {
+        if (temp2 == false) {
+            document.getElementById("i2").style.display =
+                "inline-block";
+            temp2 = true;
+        }
+        else {
+            document.getElementById("i2").style.display =
+                "none";
+            temp2 = false;
+        }
+    }
+    function q2() {
+        var q2 = document.getElementById("q2").value;
+        if (q2.toUpperCase() == "CANDLE") {
+            document.getElementById("r2").innerText =
+                "correct answer";
+            if (s2 == false) {
+                score = score + 1;
+                s2 = true;
+            }
+            document.getElementById("score").innerText =
+                "Score: " + score + "/3";;
+        }
+        else {
+            document.getElementById("r2").innerText =
+                "wrong answer";
+        }
+    }
+    var temp3 = false;
+    function h3() {
+        if (temp3 == false) {
+            document.getElementById("i3").style.display =
+                "inline-block";
+            temp3 = true;
+        }
+        else {
+            document.getElementById("i3").style.display =
+                "none";
+            temp3 = false;
+        }
+    }
+    function q3() {
+        var q3 = document.getElementById("q3").value;
+        if (q3.toUpperCase() == "SPONGE") {
+            document.getElementById("r3").innerText =
+                "correct answer";
+            if (s3 == false) {
+                score = score + 1;
+                s3 = true;
+            }
+            document.getElementById("score").innerText =
+                "Score: " + score + "/3";;
+        }
+        else {
+            document.getElementById("r3").innerText =
+                "wrong answer";
+        }
+    }
+</script>
+
+</html>

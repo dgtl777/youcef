@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 37</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image:
+                linear-gradient(skyblue, blue);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            color: white;
+            animation-name: move;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes move {
+            from {
+                transform: translateX(-100px) rotate(-15deg);
+                color: red;
+            }
+
+            to {
+                transform: translateX(100px) rotate(15deg);
+                color: white;
+            }
+        }
+
+        label {
+            color: white;
+        }
+
+        button {
+            background-color: yellow;
+            padding: 10px;
+            border-radius: 20px;
+            color: red;
+            font-weight: bold;
+            border: 4px solid red;
+        }
+
+        #result {
+            width: 80vw;
+            height: 84vh;
+            background-color: white;
+            margin: auto;
+        }
+
+        h3 {
+            color: red
+        }
+
+        h4 {
+            color: green
+        }
+
+        #score {
+            width: 50px;
+            height: 40px;
+            background-color: yellow;
+            border-radius: 50%;
+            margin: auto;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Score</h1>
+    </header>
+    <div id="result">
+        <h2>Score</h2>
+        <h2 id="score"></h2>
+        <h2>Answers</h2>
+        <h3>1.What is the capital of France?</h3>
+        <h4>Paris</h4>
+        <h3>2.Where is the Opera House?</h3>
+        <h4>Sydney</h4>
+        <h3>3.Which is the tallest building in the world?</h3>
+        <h4>Burj Khalifa</h4>
+        <h3>4.Who discovered America?</h3>
+        <h4>Columbus</h4>
+        <h3>5.What is the 7th planet in the solar system?</h3>
+        <h4>Uranus</h4>
+        <a href="session36.html"><button>Play Again</button></a>
+    </div>
+
+</body>
+<script>
+    document.getElementById("score").innerText =
+        localStorage.score;
+</script>
+
+</html>

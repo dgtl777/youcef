@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 36</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image:
+                linear-gradient(skyblue, blue);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            color: white;
+            animation-name: move;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes move {
+            from {
+                transform: translateX(-100px) rotate(-15deg);
+                color: red;
+            }
+
+            to {
+                transform: translateX(100px) rotate(15deg);
+                color: white;
+            }
+        }
+
+        u {
+            color: white;
+        }
+
+        h3 {
+            color: yellow;
+        }
+
+        label {
+            color: white;
+        }
+
+        button {
+            background-color: yellow;
+            padding: 10px;
+            border-radius: 20px;
+            color: red;
+            font-weight: bold;
+            border: 4px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <u>
+            <h1>Quiz App</h1>
+        </u>
+    </header>
+    <h3>1.What is the capital of France?</h3>
+    <label for="">Paris</label>
+    <input type="radio" name="cap" id="" value="paris">
+    <label for="">London</label>
+    <input type="radio" name="cap" id="" value="london"><br><br>
+    <label for="">New York</label>
+    <input type="radio" name="cap" id="" value="newyork">
+    <label for="">Geneva</label>
+    <input type="radio" name="cap" id="" value="geneva">
+
+    <h3>2.Where is the Opera House?</h3>
+    <label for="">Venice</label>
+    <input type="radio" name="house" id="" value="venice">
+    <label for="">Sydney</label>
+    <input type="radio" name="house" id="" value="sydney"><br><br>
+    <label for="">England</label>
+    <input type="radio" name="house" id="" value="england">
+    <label for="">Paris</label>
+    <input type="radio" name="house" id="" value="paris">
+
+    <h3>3.Which is the tallest building in the world?</h3>
+    <label for="">Twin Tower</label>
+    <input type="radio" name="build" id="" value="twin">
+    <label for="">Eiffel Tower</label>
+    <input type="radio" name="build" id="" value="eiffel"><br><br>
+    <label for="">Shanghai Tower</label>
+    <input type="radio" name="build" id="" value="shanghai">
+    <label for="">Burj Khalifa</label>
+    <input type="radio" name="build" id="" value="burj">
+
+    <h3>4.Who discovered America?</h3>
+    <label for="">Columbus</label>
+    <input type="radio" name="discover" id="" value="columbus">
+    <label for="">Barack Obama</label>
+    <input type="radio" name="discover" id="" value="barack"><br><br>
+    <label for="">Abraham Lincoln</label>
+    <input type="radio" name="discover" id="" value="abraham">
+    <label for="">Steven King</label>
+    <input type="radio" name="discover" id="" value="steven">
+
+    <h3>5.What is the 7th planet in the solar system?</h3>
+    <label for="">Earth</label>
+    <input type="radio" name="planet" id="" value="earth">
+    <label for="">Saturn</label>
+    <input type="radio" name="planet" id="" value="saturn"><br><br>
+    <label for="">Uranus</label>
+    <input type="radio" name="planet" id="" value="uranus">
+    <label for="">Mercury</label>
+    <input type="radio" name="planet" id="" value="mercury">
+    <br><br>
+
+    <a href="score.html"><button onclick="check()">Submit Answer</button></a>
+
+</body>
+<script>
+    function check() {
+        var score = 0;
+        var cap = document.querySelector('input[name="cap"]:checked').value;
+        if (cap == "paris") {
+            score = score + 1;
+            localStorage.score = score;
+            console.log(score)
+        }
+        var house = document.querySelector('input[name="house"]:checked').value;
+        if (house == "sydney") {
+            score = score + 1;
+            localStorage.score = score;
+            console.log(score)
+        }
+        var build = document.querySelector('input[name="build"]:checked').value;
+        if (build == "burj") {
+            score = score + 1;
+            localStorage.score = score;
+            console.log(score)
+        }
+        var discover = document.querySelector('input[name="discover"]:checked').value;
+        if (discover == "columbus") {
+            score = score + 1;
+            localStorage.score = score;
+            console.log(score)
+        }
+        var planet = document.querySelector('input[name="planet"]:checked').value;
+        if (planet == "uranus") {
+            score = score + 1;
+            localStorage.score = score;
+            console.log(score)
+        }
+    }
+</script>
+
+</html>
